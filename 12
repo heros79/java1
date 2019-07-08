@@ -1,0 +1,37 @@
+# java12
+package com.company;
+
+import javax.sound.midi.SysexMessage;
+
+public class Main {
+
+    public static void main(String[] args) {
+	// write your code here
+        int[] Array = new int[100];
+        for(int i=0;i<Array.length;i++){
+
+            Array[i] = (int)(10 + (Math.random() * (56 - 10)));
+            System.out.println(Array[i]);
+
+        }
+        int min = Array[0];
+        int max = Array[0];
+         for(int j=0;j<Array.length;j++) {
+             if (Array[j] < min)
+                 min = Array[j];
+             else if(min == 10)
+                 break;
+         }
+
+        for(int j=0;j<Array.length;j++) {
+            if (Array[j] > max)
+                max = Array[j];
+            else if (max==55)
+                break;
+
+        }
+             System.out.println("min is" + min);
+             System.out.println("max is" + max);
+
+    }
+}
