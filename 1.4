@@ -1,0 +1,28 @@
+# java14
+package com.company;
+
+import javax.sound.midi.SysexMessage;
+
+public class Main {
+
+    public static void main(String[] args) {
+        // write your code here
+        int[] Array = new int[100];
+        int i;
+        for (i = 0; i < Array.length; i++) {
+            Array[i] = (int) (10 + (Math.random() * (56 - 10)));
+            System.out.println(Array[i]);
+
+        }
+        for (i = 0; i < Array.length; i++) {
+            int count = 0;
+            for (int j = 0; j < Array.length; j++) {
+                if (Array[i] == Array[j] && Array[i] != 0) {
+                    count++;
+                }
+            }
+            System.out.println(Array[i] + "is repeated" + count);
+            Array[i] = 0;
+        }
+    }
+}
