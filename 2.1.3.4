@@ -1,0 +1,24 @@
+# java
+import java.util.Scanner;
+import javax.sound.midi.SysexMessage;
+
+public class Main {
+
+    public static void main(String[] args) {
+        // write your code here
+        Scanner in = new Scanner(System.in);
+        System.out.println("Input a number 1 ");
+        int num1 = in.nextInt();
+
+        System.out.println("Input a number 2 ");
+        int num2 = in.nextInt();
+        int sum;
+        sum = num1 + num2;
+        System.out.println(sum);
+        if(sum<0)
+            System.out.println("Sum is negative");
+        else if (String.valueOf(sum).length()==4)
+            System.out.println("Numbers in sum are four");
+
+    }
+}
